@@ -91,7 +91,7 @@ exports.eliminarLibro = async(req,res,next) =>{
 const configuracionMulter ={
     storage : fileStorage = multer.diskStorage({
         destination : (req,file,next) =>{
-            next(null, __dirname + '/public/files/');
+            next(null, __dirname + '/../public/uploads/');
         },
         filename : (req,file,next) =>{
             next(null, file.fieldname + '-' + Date.now() + '-' + file.originalname);
@@ -104,7 +104,7 @@ const configuracionMulter ={
 
 exports.crearExcel = async(req,res) =>{
     
-    importFileToDb(__dirname + '/public/files/' + req.file.filename);
+    importFileToDb(__dirname + '/../public/uploads/' + req.file.filename);
     console.log(res)
     res.redirect('/admin');
 
