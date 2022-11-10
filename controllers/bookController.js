@@ -100,11 +100,11 @@ exports.books = async(req,res) =>{
                            let edades3 = edad[0].edades.split(',');
 
                            let array = JSON.parse(JSON.stringify(claves));
-let palabras1 = array[0].palabras.split(',');
+let palabras1 = array[0].palabras.split(',');let palabras2 = array[1].palabras.split(',');
 
 
 
-res.render('books', {palabras1
+res.render('books', {palabras1,palabras2
 ,edades3,edit,calif,encua,gene,ilust,books,data,page});                             
 
                             })

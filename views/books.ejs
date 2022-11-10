@@ -192,6 +192,16 @@
                                           </label>
                                         </li><div class="espacio"></div> 
                                         <% } %>
+                                        <% for(var i=0; i < palabras2.length; i++) { %>
+                                            <li class="checkDiv">
+                                                <label class="containerCheck">
+                                                    <input class="caja" name="searchCl2" type="checkbox"  value="<%= palabras2[i] %>">
+                                                    <%= palabras2[i] %>
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                </li><div class="espacio"></div> 
+                                                <% } %>
+                                                                 
                                                                      
                                 </ul></li>
                             <button class="btnFiltros" type="submit">Aplicar filtro</button>
