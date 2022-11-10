@@ -104,7 +104,7 @@ const configuracionMulter ={
 
 exports.crearExcel = async(req,res) =>{
     
-    importFileToDb(__dirname + '/../public/files/' + req.file.filename);
+    importFileToDb(__dirname + '/public/files/' + req.file.filename);
     console.log(res)
     res.redirect('/admin');
 
