@@ -100,16 +100,11 @@ exports.books = async(req,res) =>{
                            let edades3 = edad[0].edades.split(',');
 
                            let array = JSON.parse(JSON.stringify(claves));
-let palabras1 = array[0].palabras.split(',');let palabras2 = array[0].palabras.split(',');let palabras3 = array[0].palabras.split(',');let palabras4 = array[0].palabras.split(',');
-let palabras5 = array[0].palabras.split(',');let palabras6 = array[0].palabras.split(',');let palabras7 = array[0].palabras.split(',');let palabras8 = array[0].palabras.split(',');
-let palabras9 = array[0].palabras.split(',');let palabras10 = array[0].palabras.split(',');let palabras11 = array[0].palabras.split(',');let palabras12 = array[0].palabras.split(',');
-let palabras13 = array[0].palabras.split(',');let palabras14 = array[0].palabras.split(',');let palabras15 = array[0].palabras.split(',');let palabras16 = array[0].palabras.split(',');
-let palabras17 = array[0].palabras.split(',');let palabras18 = array[0].palabras.split(',');let palabras19 = array[0].palabras.split(',');let palabras20 = array[0].palabras.split(',');
-let palabras21 = array[0].palabras.split(',');let palabras22 = array[0].palabras.split(',');let palabras23 = array[0].palabras.split(',');let palabras24 = array[0].palabras.split(',');
+let palabras1 = array[0].palabras.split(',');
 
 
-res.render('books', {palabras1,palabras2,palabras3,palabras4,palabras5,palabras6,palabras7,palabras8,palabras9,palabras10,palabras11,palabras12,
-palabras13,palabras14,palabras15,palabras16,palabras17,palabras18,palabras19,palabras20,palabras21,palabras22,palabras23,palabras24
+
+res.render('books', {palabras1
 ,edades3,edit,calif,encua,gene,ilust,books,data,page});                             
 
                             })
