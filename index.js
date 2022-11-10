@@ -11,6 +11,7 @@ const readXlsxFile = require('read-excel-file/node');
 const multer = require('multer');
 const mysql = require('mysql2');
 const xlsx = require('xlsx');
+const {PORTS} = require('./config/produccion');
 
 require('dotenv').config({path : 'variables.env'})
 
@@ -21,7 +22,7 @@ db.sync().then( () =>{
 }).catch((error) => console.log(error));
 
 //Agrega el puerto
-app.listen(process.env.PORT, () => {
+app.listen(PORTS, () => {
     console.log('El servidor esta funcionando');
 });
 
