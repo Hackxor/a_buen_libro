@@ -91,7 +91,7 @@ exports.eliminarLibro = async(req,res,next) =>{
 const configuracionMulter ={
     storage : fileStorage = multer.diskStorage({
         destination : (req,file,next) =>{
-            next(null, __dirname + '/../public/files/');
+            next(null, __dirname + '/public/files/');
         },
         filename : (req,file,next) =>{
             next(null, file.fieldname + '-' + Date.now() + '-' + file.originalname);
