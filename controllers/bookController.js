@@ -99,19 +99,19 @@ exports.books = async(req,res) =>{
                            let edad = JSON.parse(JSON.stringify(response));
                            let edades3 = edad[0].edades.split(',');
                            let edades4 = edad[1].edades.split(',');
-                           let edades5 = edad[2].edades.split(',');
+                           
                            let array = JSON.parse(JSON.stringify(claves));
-let palabras1 = array[0].palabras.split(',');let palabras2 = array[1].palabras.split(',');let palabras3 = array[3].palabras.split(',');let palabras4 = array[4].palabras.split(',');
+let palabras1 = array[18].palabras.split(',');let palabras2 = array[1].palabras.split(',');let palabras3 = array[3].palabras.split(',');let palabras4 = array[4].palabras.split(',');
 let palabras5 = array[5].palabras.split(',');let palabras6 = array[6].palabras.split(',');let palabras7 = array[7].palabras.split(',');let palabras8 = array[8].palabras.split(',');
 let palabras9 = array[9].palabras.split(',');let palabras10 = array[10].palabras.split(',');let palabras11 = array[11].palabras.split(',');let palabras12 = array[12].palabras.split(',');
 let palabras13 = array[13].palabras.split(',');let palabras14 = array[14].palabras.split(',');let palabras15 = array[15].palabras.split(',');let palabras16 = array[16].palabras.split(',');
-let palabras17 = array[17].palabras.split(',');let palabras18 = array[18].palabras.split(',');let palabras19 = array[19].palabras.split(',');let palabras20 = array[20].palabras.split(',');
+let palabras17 = array[17].palabras.split(',');let palabras18 = array[0].palabras.split(',');let palabras19 = array[19].palabras.split(',');let palabras20 = array[20].palabras.split(',');
 
 
 
 
 res.render('books', {palabras1,palabras2,palabras3,palabras4,palabras5,palabras6,palabras7,palabras8,palabras9,palabras10,palabras11,palabras12
-,palabras13,palabras14,palabras15,palabras16,palabras17,palabras18,palabras19,palabras20,edades3,edades4,edades5,edit,calif,encua,gene,ilust,books,data,page});                             
+,palabras13,palabras14,palabras15,palabras16,palabras17,palabras18,palabras19,palabras20,edades3,edades4,edit,calif,encua,gene,ilust,books,data,page});                             
 
                             })
                            
