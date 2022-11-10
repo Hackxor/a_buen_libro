@@ -4,15 +4,16 @@ const multer = require('multer');
 const xlsx = require('xlsx');
 const readXlsxFile = require('read-excel-file/node');
 const mysql = require('mysql2');
+const {DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DB_USER} = require('../config/produccion');
 
 
 
  const db = mysql.createConnection({
-    host: 'containers-us-west-91.railway.app',
-    user: 'root',
-    password: 'RIyzYAeDSBh0taUPOHhv',
-    database: 'railway',
-    port: '5687'
+    host: DB_HOST,
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_NAME,
+    port: DB_PORT
   })
 
 
