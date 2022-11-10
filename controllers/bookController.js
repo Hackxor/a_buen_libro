@@ -98,14 +98,14 @@ exports.books = async(req,res) =>{
                         db.query(edades2, (error, response) => {
                            let edad = JSON.parse(JSON.stringify(response));
                            let edades3 = edad[0].edades.split(',');
-
+                           let edades4 = edad[1].edades.split(',');
                            let array = JSON.parse(JSON.stringify(claves));
 let palabras1 = array[0].palabras.split(',');let palabras2 = array[1].palabras.split(',');
 
 
 
 res.render('books', {palabras1,palabras2
-,edades3,edit,calif,encua,gene,ilust,books,data,page});                             
+,edades3,edades4,edit,calif,encua,gene,ilust,books,data,page});                             
 
                             })
                            
