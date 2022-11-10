@@ -6,13 +6,13 @@ const mysql = require('mysql2');
 
 
 
- const db = mysql.createConnection({
-    host: 'localhost',
+const db = mysql.createConnection({
+    host: 'containers-us-west-91.railway.app',
     user: 'root',
-    password: '',
-    database: 'libreria',
+    password: 'RIyzYAeDSBh0taUPOHhv',
+    database: 'railway',
+    port: '5687'
   })
-
 
 
 
