@@ -5,7 +5,7 @@ const path = require('path');
 const db = require('./config/db');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const PORTS = process.env.PORTS || 5000
+const {PORT} = require('./config/produccion');
 
 
 require('./models/Libros');
@@ -15,7 +15,7 @@ db.sync().then( () =>{
 }).catch((error) => console.log(error));
 
 //Agrega el puerto
-app.listen(PORTS, () => {
+app.listen(PORT, () => {
     console.log('El servidor esta funcionando');
 });
 
@@ -36,6 +36,9 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 // ubicacion de vistas
 app.set('views', path.join(__dirname, './views'));
+// crear la session
+
+
 
 
 
