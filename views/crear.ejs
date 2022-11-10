@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Agregar</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="/css/crear.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Agregar un nuevo libro</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/nuevoLibro" method="POST" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="name">ISBN</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="isbn" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="name">Titulo del libro</div>
+                          <div class="value">
+                              <input class="input--style-6" type="text" name="titulo" required>
+                          </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="name">Autor</div>
+                        <div class="value">
+                            <input class="input--style-6" type="text" name="autor" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="name">Año de creacion</div>
+                      <div class="value">
+                          <input class="input--style-6" type="text" placeholder="Solo numeros" name="tiempo" required>
+                      </div>
+                  </div>
+                  
+                <div class="form-row">
+                  <div class="name">Escribe la critica para este libro</div>
+                  <div class="value">
+                      <div class="input-group">
+                          <textarea style="height: 230px;" class="textarea--style-6" name="critica" placeholder="Escribe aqui..."></textarea>
+                      </div>
+                  </div>
+              </div>
+              <h3 style="text-align: center">Medidas del libro</h3>
+              <div class="form-row">
+                <div class="name">Ancho</div>
+                <div class="value">
+                    <input class="input--style-6" placeholder="Ingrese la medida en CM" type="text" name="ancho" required>
+                </div>
+            </div>
+            <div class="form-row">
+              <div class="name">Alto de el libro</div>
+              <div class="value">
+                  <input class="input--style-6" placeholder="Ingrese la medida en CM" type="text" name="alto" required>
+              </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Numero de paginas</div>
+            <div class="value">
+                <input class="input--style-6" type="text" placeholder="Solo numeros" name="paginas" required>
+            </div>
+        </div>
+        <h3 style="text-align: center">Otros datos</h3>
+        <div class="form-row">
+          <div class="name">Tipo de encuadernacion</div>
+          <div class="value">
+              <input class="input--style-6" type="text" name="encuadernacion" required>
+          </div>
+      </div>
+      <div class="form-row">
+        <div class="name">Editorial</div>
+        <div class="value">
+            <input class="input--style-6" type="text" name="editorial" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="name">Calficacion</div>
+        <div class="value">
+            <input class="input--style-6" type="text" name="calificacion" required>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="name">Genero</div>
+        <div class="value">
+            <input class="input--style-6" type="text" name="genero" required>
+        </div>
+    </div>
+                        <div class="form-row">
+                            <div class="name">Nombre del ilustrador</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="ilustrador" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Tipo de ilustracion</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="ilustracion" required>
+                            </div>
+                        </div>
+                        <h3 style="text-align: center">Imagenes del libro</h3>
+                          <br>
+                          <h5 style="text-align: center">Imagen para portada</h5>
+                        <div class="form-row">
+                          
+                            <input  type="file" name="portada" id="file">
+                        </div>
+
+
+
+                       
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn--radius-2 btn--blue-2" type="submit">Agregar Libro</button>
+                            <a href="/admin" style="text-decoration: none;" class="btn btn--radius-2 btn--blue-2" type="submit">Cancelar</a>
+                        </div>
+                    </form>
+
+                </div>
+               
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+
+    <!-- Main JS-->
+    <script src="/js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
