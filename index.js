@@ -5,7 +5,7 @@ const path = require('path');
 const db = require('./config/db');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-// const {PORTS} = require('./config/produccion');
+const PORTS = process.env.PORTS || 5000
 
 
 require('./models/Libros');
@@ -15,7 +15,7 @@ db.sync().then( () =>{
 }).catch((error) => console.log(error));
 
 //Agrega el puerto
-app.listen(5000, () => {
+app.listen(PORTS, () => {
     console.log('El servidor esta funcionando');
 });
 
