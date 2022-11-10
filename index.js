@@ -6,14 +6,8 @@ const db = require('./config/db');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const fs = require('fs');
-const readXlsxFile = require('read-excel-file/node');
-const multer = require('multer');
-const mysql = require('mysql2');
-const xlsx = require('xlsx');
 const {PORTS} = require('./config/produccion');
 
-require('dotenv').config({path : 'variables.env'})
 
 require('./models/Libros');
 
@@ -45,8 +39,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
 // crear la session
 app.use(session({
-    secret: process.env.SECRET,
-    key: process.env.KEY,
+    secret: 'secreto',
+    key: 'clave',
     resave : false,
     saveUninitialized : false
 }))
