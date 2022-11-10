@@ -5,7 +5,6 @@ const path = require('path');
 const db = require('./config/db');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const session = require('express-session');
 const {PORTS} = require('./config/produccion');
 
 
@@ -37,14 +36,6 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 // ubicacion de vistas
 app.set('views', path.join(__dirname, './views'));
-// crear la session
-app.use(session({
-    secret: 'secreto',
-    key: 'clave',
-    resave : false,
-    saveUninitialized : false
-}))
-
 
 
 
